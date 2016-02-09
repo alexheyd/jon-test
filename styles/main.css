@@ -1,16 +1,118 @@
-body {
-    text-align: center;
+/*
+    I'm using two new units, vh and vw.
+    They stand for viewport height and viewport width.
+    width: 100vw means take up 100% of the browser viewport
+    so width: 50vw would be 50% and so on.
+    The same applies to height: 100vh
+ */
+
+* {
     margin: 0;
     padding: 0;
 }
 
+body {
+    text-align: center;
+}
+
 .container {
-    width: 700px;
+    width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
 
-.main-copy {
-    background: #ccc;
+nav {
+    background: #333;
+    color: #fff;
+    height: 10vh;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
     padding: 20px;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+.sidebar, .main-content {
+    float: left;
+    padding: 20px;
+    height: 80vh;
+}
+
+.sidebar {
+    width: 300px;
+    background: #444;
+    color: #fff;
+}
+
+.main-content {
+    width: 620px;
+    background: #999;
+}
+
+footer {
+    clear: both;
+    height: 10vh;
+    background: #ccc;
+}
+
+.intro-copy {
+    padding: 20px;
+}
+
+.modal {
+    position: absolute;
+    width: 70vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #cc0000;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+.modal-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.modal-content h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    background: #cc0000;
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #cc0000;
+    cursor: pointer;
+}
+
+.ui-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 100;
 }
